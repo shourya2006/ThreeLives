@@ -1,0 +1,18 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "threelives:font/red_heart.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": ["\uE000"]
+    },
+    {
+      "type": "bitmap",
+      "file": "threelives:font/grey_heart.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": ["\uE001"]
+    }
+  ]
+}

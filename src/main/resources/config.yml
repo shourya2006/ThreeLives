@@ -1,0 +1,77 @@
+# ──────────────────────────────────────────────
+#   ThreeLives  –  Configuration
+# ──────────────────────────────────────────────
+
+# The number of lives every new player starts with.
+default-lives: 3
+
+# Maximum lives a player can have at one time.
+max-lives: 3
+
+# Minimum lives before a player is considered "eliminated".
+# When a player reaches 0 lives, they will be handled by the elimination settings.
+min-lives: 0
+
+# Can players withdraw their lives into a physical item using /withdraw?
+enable-withdraw-command: true
+
+# Should players drop a physical life item when they die?
+drop-life-on-death: true
+
+# Can players craft and use the Revive Book?
+enable-revive-book: true
+
+# ── Revive Book Recipe ──
+revive-book-recipe:
+  base-item: "BOOK"
+  life-items-required: 3
+
+# ── Elimination Settings ──
+elimination:
+  # Action to take when a player is eliminated. 
+  # Options: DEATH_BOX, BAN, NONE
+  elimination-action: "DEATH_BOX"
+  
+  # The ban reason shown to the player when they try to join (if action is BAN).
+  ban-reason: "&4You have been eliminated! You have no lives remaining."
+  # Whether to kick the player from the server when they lose all lives (useful if ban is false).
+  kick-on-elimination: true
+  # The message shown when a player is kicked.
+  kick-message: "&4You have been eliminated! You have no lives remaining."
+  # Whether to run commands when a player is eliminated (useful for custom punishment plugins etc.)
+  run-commands: false
+  # Commands to run on elimination. Use {player} as a placeholder.
+  commands:
+    - "ban {player} Eliminated - no lives remaining"
+
+# ── Nametag / Hologram Hearts ──
+nametag:
+  # Full heart symbol shown per life.
+  heart-symbol: "❤"
+  # Color for the heart symbols.
+  heart-color: "&c"
+  # Color when the player has only 1 life left.
+  heart-low-color: "&4"
+  # Show hearts in boss bar format instead (false = below nametag via armor stand).
+  update-interval-ticks: 20
+
+# ── Messages ──
+messages:
+  prefix: "&8[&cThreeLives&8] &r"
+  lives-check-self: "&7You have &c{lives} &7life/lives remaining."
+  lives-check-other: "&7{player} has &c{lives} &7life/lives remaining."
+  lives-set: "&7{player}'s lives have been set to &c{lives}&7."
+  lives-add: "&7Added &a{amount} &7life/lives to &c{player}&7. They now have &c{lives}&7."
+  lives-remove: "&7Removed &c{amount} &7life/lives from &c{player}&7. They now have &c{lives}&7."
+  lives-reset: "&7{player}'s lives have been reset to &c{lives}&7."
+  life-lost: "&cYou lost a life! You have &4{lives} &clives remaining."
+  eliminated: "&4You have been eliminated! You have no lives remaining."
+  no-permission: "&cYou do not have permission to do that."
+  player-not-found: "&cPlayer &4{player} &cnot found."
+  invalid-number: "&cPlease provide a valid number."
+  lives-maxed: "&cThat player is already at maximum lives ({max})."
+  lives-already-zero: "&cThat player already has 0 lives."
+  withdraw-success: "&7You have successfully withdrawn &c{amount} &7life/lives!"
+  withdraw-not-enough: "&cYou do not have enough lives to withdraw! You must have at least {required} lives."
+  redeem-success: "&aYou redeemed a life! You now have &c{lives} &alives."
+  redeem-maxed: "&cYou already have the maximum amount of lives ({max})!"

@@ -1,0 +1,72 @@
+name: ThreeLives
+version: '1.0.1'
+main: com.example.threelives.ThreeLivesPlugin
+api-version: '1.21'
+description: A 3-lives plugin that displays hearts below player nametags
+author: ThreeLives
+
+commands:
+  threelives:
+    description: Main command for ThreeLives.
+    usage: /<command>
+    aliases: [tl]
+    permission: threelives.admin
+  lives:
+    description: Check your current lives or another player's lives
+    usage: /lives [player]
+    permission: threelives.lives
+  setlives:
+    description: Set a player's lives count
+    usage: /setlives <player> <amount>
+    permission: threelives.admin
+  resetlives:
+    description: Reset a player's lives to the default (3)
+    usage: /resetlives <player>
+    permission: threelives.admin
+  addlives:
+    description: Add lives to a player
+    usage: /addlives <player> <amount>
+    permission: threelives.admin
+  removelives:
+    description: Remove lives from a player
+    usage: /removelives <player> <amount>
+    permission: threelives.admin
+  withdraw:
+    description: Withdraw a life into a physical Nether Star item
+    usage: /withdraw [amount]
+    permission: threelives.withdraw
+  setdeathbox:
+    description: Set the location of the global 5x5 death box.
+    usage: /setdeathbox
+    permission: threelives.admin
+
+permissions:
+  threelives.admin:
+    description: Full admin access to ThreeLives commands
+    default: op
+    children:
+      threelives.setlives: true
+      threelives.resetlives: true
+      threelives.addlives: true
+      threelives.removelives: true
+  threelives.lives:
+    description: Permission to check lives
+    default: true
+  threelives.setlives:
+    description: Permission to set lives
+    default: op
+  threelives.resetlives:
+    description: Permission to reset lives
+    default: op
+  threelives.addlives:
+    description: Permission to add lives
+    default: op
+  threelives.removelives:
+    description: Permission to remove lives
+    default: op
+  threelives.bypass:
+    description: Bypass losing lives on death
+    default: false
+  threelives.withdraw:
+    description: Permission to use the withdraw command
+    default: true
