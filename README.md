@@ -80,10 +80,6 @@ Install JDK 21 and run `./gradlew clean build` (Windows: `gradlew.bat clean buil
 
 Release 1.0.1 passed 51 named Mineflayer integration checks: 28 on Paper 1.21.1 and 23 on Paper 1.21.11. They covered life counts, withdrawal/redemption, revival and recipe validation, menu misuse, death-box confinement, persistence, and ban-mode revival. Automated server checks do not establish rendering in every client or compatibility with untested versions.
 
-## Development disclosure
-
-The existing ThreeLives plugin received AI-assisted code fixes and validation work using Codex. The project description and release text were also prepared with AI assistance. Existing resource-pack artwork was reused for the icon; the gallery image is a capture of the actual Minecraft client. The plugin does not use generative AI at runtime.
-
 ## Support
 
 Report bugs at https://github.com/shourya2006/ThreeLives/issues. Include your Minecraft and Paper versions, plugin version, relevant configuration, and steps to reproduce. Remove secrets and private player information from logs before posting.
